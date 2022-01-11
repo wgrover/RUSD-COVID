@@ -13,7 +13,7 @@
 12	O	1	Early Childhood
 13	O	1	Educational Options
 14	O	0	Elementary Education
-15	E	3	Emerson Elementary School
+15	E	4	Emerson Elementary School
 16	O	1	Facilities
 17	O	0	Family Resource Center
 18	E	2	Franklin Elementary School
