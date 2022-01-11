@@ -8,7 +8,6 @@ middles = []
 highs = []
 others = []
 
-plt.figure(figsize=(5, 9))
 files = os.listdir(".")
 files.sort()
 
@@ -40,25 +39,29 @@ for filename in files:
         others.append(other)
 
 schools = numpy.array(elementarys) + numpy.array(middles) + numpy.array(highs)
+dates = [date[-2:] for date in dates]
 
-ax1 = plt.subplot(411)
+plt.cla()
 plt.bar(dates, schools)
-plt.text(0.01,0.9,'All schools', transform = ax1.transAxes)
-plt.tick_params(labelbottom=False)
+plt.title("Total cases at RUSD schools (14-day rolling window)")
+plt.xlabel("January 2021")
+plt.savefig("all_schools.png")
 
-ax2 = plt.subplot(412)
+plt.cla()
 plt.bar(dates, elementarys)
-plt.text(0.01,0.9,'Elementary schools', transform = ax2.transAxes)
-plt.tick_params(labelbottom=False)
+plt.title("Elementary schools (14-day rolling window)")
+plt.xlabel("January 2021")
+plt.savefig("elementary_schools.png")
 
-ax3 = plt.subplot(413)
+plt.cla()
 plt.bar(dates, middles)
-plt.text(0.01,0.9,'Middle schools', transform = ax3.transAxes)
-plt.tick_params(labelbottom=False)
+plt.title("Middle schools (14-day rolling window)")
+plt.xlabel("January 2021")
+plt.savefig("middle_schools.png")
 
-ax4 = plt.subplot(414)
+plt.cla()
 plt.bar(dates, highs)
-plt.text(0.01,0.9,'High schools', transform = ax4.transAxes)
+plt.title("High schools (14-day rolling window)")
+plt.xlabel("January 2021")
+plt.savefig("high_schools.png")
 
-
-plt.show()
