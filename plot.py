@@ -44,24 +44,24 @@ dates = [date[-2:] for date in dates]
 plt.cla()
 plt.bar(dates, schools, color="k")
 plt.title("Total cases at RUSD schools (14-day rolling window)")
-plt.xlabel("January 2021")
+plt.xlabel("January 2022")
 plt.savefig("all_schools.png")
 
 plt.cla()
 plt.bar(dates, elementarys, color="b")
 plt.title("Elementary schools (14-day rolling window)")
-plt.xlabel("January 2021")
+plt.xlabel("January 2022")
 plt.savefig("elementary_schools.png")
 
 plt.cla()
 plt.bar(dates, middles, color="orange")
 plt.title("Middle schools (14-day rolling window)")
-plt.xlabel("January 2021")
+plt.xlabel("January 2022")
 plt.savefig("middle_schools.png")
 
 plt.cla()
 plt.bar(dates, highs, color="r")
 plt.title("High schools (14-day rolling window)")
-plt.xlabel("January 2021")
+plt.xlabel("January 2022")
 plt.savefig("high_schools.png")
 

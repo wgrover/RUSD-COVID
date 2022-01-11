@@ -34,7 +34,7 @@
 33	E	1	Longfellow Elementary School
 34	E	11	Madison Elementary School
 35	E	1	Magnolia Elementary School
-36	O	10	Maintenance and Operations
+36	O	9	Maintenance and Operations
 37	H	6	Martin Luther King High School
 38	M	2	Miller Middle School
 39	E	4	Monroe Elementary School
