@@ -10,10 +10,11 @@ others = []
 
 files = os.listdir(".")
 files.sort()
+print("\t\tElem\tMidd\tHigh\tOther\tSchools")
 
 for filename in files:
     if filename.endswith(".txt"):
-        print(filename, end="\t")
+        print(filename[:10], end="\t")
         dates.append(filename[:10])
         infile = open(filename, "r")
         elementary = 0
@@ -32,7 +33,7 @@ for filename in files:
                 high += count
             elif cat == "O":
                 other += count
-        print(elementary, middle, high, other, elementary+middle+high)
+        print(f"{elementary}\t{middle}\t{high}\t{other}\t{elementary+middle+high}")
         elementarys.append(elementary)
         middles.append(middle)
         highs.append(high)
@@ -65,3 +66,8 @@ plt.title("High schools (14-day rolling window)")
 plt.xlabel("January 2022")
 plt.savefig("high_schools.png")
 
+plt.cla()
+plt.bar(dates, others, color="0.80")
+plt.title("Non-school cases (14-day rolling window)")
+plt.xlabel("January 2022")
+plt.savefig("others.png")

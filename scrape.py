@@ -81,19 +81,26 @@ locations = (
 outfile = open(datetime.now().strftime("%Y-%m-%d")+".txt", "w")
 
 for num, location in enumerate(locations):
-    browser = webdriver.Safari()
-    browser.get(location[1])
-    time.sleep(6)
-    response = browser.page_source
-    start = response.find("Total Confirmed Cases") + 631
-    count = response[start:start+10].split("<")[0]
-    if ": center;" in count:
-        count = 0
-    else:
-        count = int(count)
-    print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
-    outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
-    browser.quit()
+    success = False
+    while not success:
+        browser = webdriver.Safari()
+        browser.get(location[1])
+        time.sleep(5)
+        response = browser.page_source
+        start = response.find("Total Confirmed Cases") + 631
+        count = response[start:start+10].split("<")[0]
+        if ": center;" in count:
+            count = 0
+            success = True
+        elif count.isnumeric():
+            count = int(count)
+            success = True
+        if success:
+            print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
+            outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
+        else:
+            print("RETRY")
+        browser.quit()
 
 outfile.close()
 
