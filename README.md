@@ -2,8 +2,6 @@
 
 Code for tracking active COVID-19 cases in the [Riverside Unified School District](https://www.riversideunified.org)
 
-![test](all_schools.png)
-
 ## Prerequisites
 
 - python3 via [https://www.python.org](https://www.python.org)
