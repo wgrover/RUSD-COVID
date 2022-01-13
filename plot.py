@@ -2,6 +2,9 @@ import os
 import matplotlib.pyplot as plt
 import numpy
 
+def url():
+    plt.gcf().text(0.13, 0.85, "https://github.com/wgrover/RUSD-COVID", fontsize=8)
+
 dates = []
 elementarys = []
 middles = []
@@ -40,34 +43,35 @@ for filename in files:
         others.append(other)
 
 schools = numpy.array(elementarys) + numpy.array(middles) + numpy.array(highs)
-dates = [date[-2:] for date in dates]
+dates = [date[-2:] for date in dates]  # temporary for January
 
 plt.cla()
 plt.bar(dates, schools, color="k")
-plt.title("Total cases at RUSD schools (14-day rolling window)")
+plt.title("Active cases at all RUSD schools (14-day rolling window)")
 plt.xlabel("January 2022")
+url()
 plt.savefig("all_schools.png")
 
 plt.cla()
 plt.bar(dates, elementarys, color="b")
-plt.title("Elementary schools (14-day rolling window)")
+plt.title("Active cases at elementary schools (14-day rolling window)")
 plt.xlabel("January 2022")
 plt.savefig("elementary_schools.png")
 
 plt.cla()
 plt.bar(dates, middles, color="orange")
-plt.title("Middle schools (14-day rolling window)")
+plt.title("Active cases at middle schools (14-day rolling window)")
 plt.xlabel("January 2022")
 plt.savefig("middle_schools.png")
 
 plt.cla()
 plt.bar(dates, highs, color="r")
-plt.title("High schools (14-day rolling window)")
+plt.title("Active cases at high schools (14-day rolling window)")
 plt.xlabel("January 2022")
 plt.savefig("high_schools.png")
 
 plt.cla()
 plt.bar(dates, others, color="0.80")
-plt.title("Non-school cases (14-day rolling window)")
+plt.title("Active non-school cases (14-day rolling window)")
 plt.xlabel("January 2022")
 plt.savefig("others.png")
