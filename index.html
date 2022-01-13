@@ -1,6 +1,30 @@
-<h1>testing</h1>
-<img src="all_schools.png">
-<img src="elementary_schools.png">
-<img src="middle_schools.png">
-<img src="high_schools.png">
-<img src="others.png">
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Active COVID-19 cases in the Riverside Unified School District</title>
+  </head>
+  <body>
+    <h1>
+      Active COVID-19 cases in the Riverside Unified School District
+    </h1>
+    <img src="all_schools.png">
+    <img src="elementary_schools.png">
+    <img src="middle_schools.png">
+    <img src="high_schools.png">
+    <img src="others.png">    
+    <h2>
+      Methods
+    </h2>
+    <p>
+      Each day's data is simply a copy of the contents of <a href="https://datastudio.google.com/u/0/reporting/768d990d-b5cc-459f-9d31-a8b68e950ae1/page/1uztB">RUSD's COVID-19 Public Dashboard</a> on that day.  RUSD's dashboard is constantly updated.  This page reflects the contents of the dashboard at about 8pm every night.
+    </p>
+    <p>
+      RUSD provides numbers of active cases during a "14-day rolling window," so each individual case might be included in up to 14 consecutive days' data.  School cases include both students and staff at schools.  Staff in RUSD units not directly associated with a school are included in the "Non-school cases."
+    </p>
+    <p>
+      This is maintained by <a href="https://groverlab.org">William Grover</a>.  The Python code for scraping numbers from the RUSD dashboard and generating the plots is available in <a href="https://github.com/wgrover/RUSD-COVID">this GitHub repository</a>.
+    </p>
+  </body>
+</html>
