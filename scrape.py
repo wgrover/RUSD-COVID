@@ -78,7 +78,7 @@ locations = (
     ("Woodcrest Elementary School", "https://datastudio.google.com/u/0/reporting/768d990d-b5cc-459f-9d31-a8b68e950ae1/page/s4ztB", "E")
 )
 
-outfile = open(datetime.now().strftime("%Y-%m-%d")+".txt", "w")
+outfile = open("./data/"+datetime.now().strftime("%Y-%m-%d")+".txt", "w")
 
 for num, location in enumerate(locations):
     success = False

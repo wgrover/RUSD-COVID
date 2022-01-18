@@ -1,6 +1,6 @@
 # RUSD-COVID
 
-Code for tracking active COVID-19 cases in the [Riverside Unified School District](https://www.riversideunified.org)
+Code for tracking active COVID-19 cases in the [Riverside Unified School District](https://www.riversideunified.org).  The resulting plots are available at (https://wgrover.github.io/RUSD-COVID)[https://wgrover.github.io/RUSD-COVID].
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Note that this code is "quick and dirty" and has some bad design decisions (like
 
 ## Usage
 
-`python3 scrape.py` to scrape the [RUSD COVID case dashboard](https://datastudio.google.com/u/0/reporting/768d990d-b5cc-459f-9d31-a8b68e950ae1/page/1uztB) and create a new file with today's data (or replace today's file if it already exists).
+`python3 scrape.py` to scrape the [RUSD COVID case dashboard](https://datastudio.google.com/u/0/reporting/768d990d-b5cc-459f-9d31-a8b68e950ae1/page/1uztB) and create a new file in the `data` directory with today's data (or replace today's file if it already exists).
 
 `python3 plot.py` to generate plots summarizing all the locally saved data.
 
