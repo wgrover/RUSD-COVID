@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 import os
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 import numpy
+from datetime import datetime
 
 def url():
     plt.gcf().text(0.13, 0.85, "https://wgrover.github.io/RUSD-COVID", fontsize=8)
+    plt.gcf().text(0.87, 0.02, "2022")
 
 dates = []
 elementarys = []
@@ -18,7 +21,7 @@ print("\t\tElem\tMidd\tHigh\tOther\tSchools")
 
 for filename in files:
     print(filename[:10], end="\t")
-    dates.append(filename[:10])
+    dates.append(datetime.strptime(filename[:10], "%Y-%m-%d"))
     infile = open("./data/" + filename, "r")
     elementary = 0
     middle = 0
@@ -43,35 +46,44 @@ for filename in files:
     others.append(other)
 
 schools = numpy.array(elementarys) + numpy.array(middles) + numpy.array(highs)
-dates = [date[-2:] for date in dates]  # temporary for January
 
 plt.cla()
 plt.bar(dates, schools, color="k")
 plt.title("Active cases at all RUSD schools (14-day rolling window)")
-plt.xlabel("January 2022")
 url()
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
+for label in plt.gca().get_xticklabels(which='major'):
+    label.set(rotation=30, horizontalalignment='right')
 plt.savefig("all_schools.png")
 
 plt.cla()
 plt.bar(dates, elementarys, color="b")
 plt.title("Active cases at elementary schools (14-day rolling window)")
-plt.xlabel("January 2022")
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
+for label in plt.gca().get_xticklabels(which='major'):
+    label.set(rotation=30, horizontalalignment='right')
 plt.savefig("elementary_schools.png")
 
 plt.cla()
 plt.bar(dates, middles, color="orange")
 plt.title("Active cases at middle schools (14-day rolling window)")
-plt.xlabel("January 2022")
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
+for label in plt.gca().get_xticklabels(which='major'):
+    label.set(rotation=30, horizontalalignment='right')
 plt.savefig("middle_schools.png")
 
 plt.cla()
 plt.bar(dates, highs, color="r")
 plt.title("Active cases at high schools (14-day rolling window)")
-plt.xlabel("January 2022")
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
+for label in plt.gca().get_xticklabels(which='major'):
+    label.set(rotation=30, horizontalalignment='right')
 plt.savefig("high_schools.png")
 
 plt.cla()
 plt.bar(dates, others, color="0.80")
 plt.title("Active non-school cases (14-day rolling window)")
-plt.xlabel("January 2022")
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
+for label in plt.gca().get_xticklabels(which='major'):
+    label.set(rotation=30, horizontalalignment='right')
 plt.savefig("others.png")
