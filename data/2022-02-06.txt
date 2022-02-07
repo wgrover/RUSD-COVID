@@ -31,7 +31,7 @@
 30	E	17	Lake Mathews Elementary School
 31	E	4	Liberty Elementary School
 32	H	0	Lincoln Continuation High
-33	E	4	Longfellow Elementary School
+33	E	5	Longfellow Elementary School
 34	E	5	Madison Elementary School
 35	E	1	Magnolia Elementary School
 36	O	3	Maintenance and Operations
