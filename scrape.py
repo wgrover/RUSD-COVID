@@ -87,9 +87,11 @@ for num, location in enumerate(locations):
         browser.get(location[1])
         time.sleep(5)
         response = browser.page_source
-        start = response.find("Total Confirmed Cases") + 631
+        # start = response.find("Total Confirmed Cases") + 631
+        start = response.find("Total Confirmed Cases") + 689
         count = response[start:start+10].split("<")[0]
-        if ": center;" in count:
+        print(count)
+        if 'e;">' in count:
             count = 0
             success = True
         elif count.isnumeric():
