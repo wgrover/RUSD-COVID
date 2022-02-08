@@ -9,7 +9,7 @@
 8	M	17	Central Middle School
 9	M	8	Chemawa Middle School
 10	O	0	Communications Admin
-11	M	16	Earhart Middle School
+11	M	18	Earhart Middle School
 12	O	0	Early Childhood
 13	O	0	Educational Options
 14	O	0	Elementary Education
@@ -37,7 +37,7 @@
 36	O	3	Maintenance and Operations
 37	H	12	Martin Luther King High School
 38	M	12	Miller Middle School
-39	E	4	Monroe Elementary School
+39	E	6	Monroe Elementary School
 40	E	14	Mt View Elementary School
 41	H	21	North High School
 42	O	0	Nutrition Services - Administration
@@ -50,13 +50,13 @@
 49	O	1	Psychological Services
 50	O	0	Pupil Services
 51	H	0	Raincross Continuation High
-52	H	21	Ramona High School
+52	H	22	Ramona High School
 53	O	0	Research, Assessment and Evaluation
 54	O	0	Risk Management
 55	E	7	Rivera Elementary School
 56	O	5	Riverside Adult School
 57	O	0	Secondary Education
-58	M	4	Sierra Middle School
+58	M	5	Sierra Middle School
 59	O	0	Special Education
 60	M	2	STEM Academy
 61	E	4	Sunshine Early Childhood Center
@@ -64,7 +64,7 @@
 63	E	5	Taft Elementary School
 64	O	0	Technology Services
 65	O	0	Transportation
-66	E	15	Twain Elementary School
+66	E	17	Twain Elementary School
 67	M	4	University Middle School
 68	E	0	Victoria Elementary School
 69	E	6	Washington Elementary School
