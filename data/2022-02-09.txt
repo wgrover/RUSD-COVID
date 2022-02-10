@@ -1,4 +1,4 @@
-0	E	4	Adams Elementary School
+0	E	5	Adams Elementary School
 1	E	11	Alcott Elementary School
 2	H	9	Arlington High School
 3	E	4	Beatty Elementary School
@@ -41,7 +41,7 @@
 40	E	14	Mt View Elementary School
 41	H	16	North High School
 42	O	0	Nutrition Services - Administration
-43	E	5	Pachappa Elementary School
+43	E	9	Pachappa Elementary School
 44	H	10	Poly High School
 45	O	0	Professional Growth Systems
 46	O	0	Program Development & Extended Learning
@@ -54,12 +54,12 @@
 53	O	0	Research, Assessment and Evaluation
 54	O	0	Risk Management
 55	E	7	Rivera Elementary School
-56	O	3	Riverside Adult School
+56	O	4	Riverside Adult School
 57	O	0	Secondary Education
-58	M	5	Sierra Middle School
+58	M	6	Sierra Middle School
 59	O	0	Special Education
 60	M	2	STEM Academy
-61	E	7	Sunshine Early Childhood Center
+61	E	9	Sunshine Early Childhood Center
 62	O	0	Superintendent
 63	E	3	Taft Elementary School
 64	O	0	Technology Services
