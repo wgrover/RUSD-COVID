@@ -1,6 +1,6 @@
 0	E	2	Adams Elementary School
 1	E	1	Alcott Elementary School
-2	H	7	Arlington High School
+2	H	6	Arlington High School
 3	E	0	Beatty Elementary School
 4	E	0	Bryant Elementary School
 5	O	0	Business Services
