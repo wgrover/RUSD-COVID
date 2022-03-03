@@ -27,8 +27,8 @@
 26	O	0	Innovation and Learner Engagement
 27	E	0	Jackson Elementary School
 28	E	0	Jefferson Elementary School
-29	E	3	Kennedy Elementary School
-30	E	3	Lake Mathews Elementary School
+29	E	2	Kennedy Elementary School
+30	E	2	Lake Mathews Elementary School
 31	E	1	Liberty Elementary School
 32	H	0	Lincoln Continuation High
 33	E	2	Longfellow Elementary School
@@ -39,10 +39,10 @@
 38	M	0	Miller Middle School
 39	E	0	Monroe Elementary School
 40	E	4	Mt View Elementary School
-41	H	3	North High School
+41	H	2	North High School
 42	O	0	Nutrition Services - Administration
 43	E	0	Pachappa Elementary School
-44	H	1	Poly High School
+44	H	0	Poly High School
 45	O	0	Professional Growth Systems
 46	O	0	Program Development & Extended Learning
 47	O	0	Program Quality/Academic English Learners
