@@ -49,6 +49,8 @@ for filename in files:
 
 schools = numpy.array(elementarys) + numpy.array(middles) + numpy.array(highs)
 
+plt.figure(figsize=(12, 4))
+
 plt.cla()
 plt.bar(dates, schools, color="k")
 plt.title("Active cases at all RUSD schools (14-day rolling window)")
