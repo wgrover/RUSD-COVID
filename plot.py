@@ -20,6 +20,8 @@ files.sort()
 print("\t\tElem\tMidd\tHigh\tOther\tSchools")
 
 for filename in files:
+    if ".DS_Store" in filename:
+        continue
     print(filename[:10], end="\t")
     dates.append(datetime.strptime(filename[:10], "%Y-%m-%d"))
     infile = open("./data/" + filename, "r")
