@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 import time
-import re
-
-options = Options()
-options.headless = True
 
 locations = (
     ("Adams Elementary School", "https://datastudio.google.com/u/0/reporting/768d990d-b5cc-459f-9d31-a8b68e950ae1/page/1uztB", "E"),
@@ -88,16 +83,10 @@ outfile = open("./data/"+datetime.now().strftime("%Y-%m-%d")+".txt", "w")
 for num, location in enumerate(locations):
     success = False
     while not success:
-        browser = webdriver.Chrome(options=options)
+        browser = webdriver.Safari()
         browser.get(location[1])
-        time.sleep(30)
+        time.sleep(5)
         response = browser.page_source
-
-        result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
-        print(result.group(1))
-        success = True
-        break
-
         # start = response.find("Total Confirmed Cases") + 631
         start = response.find("Total Confirmed Cases") + 689
         count = response[start:start+10].split("<")[0]
