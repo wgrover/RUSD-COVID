@@ -95,17 +95,10 @@ for num, location in enumerate(locations):
 
         result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
         if not result:
-            print("NO RESULT")
-        else:
-            print(result.group(1))
-        success = True
-        break
-
-        if 'e;">' in count:
             count = 0
             success = True
-        elif count.isnumeric():
-            count = int(count)
+        else:
+            count = int(result.group(1))
             success = True
         if success:
             print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
