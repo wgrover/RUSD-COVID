@@ -94,14 +94,13 @@ for num, location in enumerate(locations):
         response = browser.page_source
 
         result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
-        print(result.group(1))
+        if not result:
+            print("NO RESULT")
+        else:
+            print(result.group(1))
         success = True
         break
 
-        # start = response.find("Total Confirmed Cases") + 631
-        start = response.find("Total Confirmed Cases") + 689
-        count = response[start:start+10].split("<")[0]
-        print(count)
         if 'e;">' in count:
             count = 0
             success = True
