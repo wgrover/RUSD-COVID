@@ -89,7 +89,7 @@ outfile = open("./data/"+datetime.now().strftime("%Y-%m-%d")+".txt", "w")
 for num, location in enumerate(locations):
     browser = webdriver.Chrome(options=options)
     browser.get(location[1])
-    time.sleep(30)
+    time.sleep(5)
     response = browser.page_source
 
     result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
