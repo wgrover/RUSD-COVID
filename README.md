@@ -1,6 +1,6 @@
 # RUSD-COVID
 
-Code for tracking active COVID-19 cases in the [Riverside Unified School District](https://www.riversideunified.org).  The resulting plots are available at (https://wgrover.github.io/RUSD-COVID)[https://wgrover.github.io/RUSD-COVID].
+Code for tracking active COVID-19 cases in the [Riverside Unified School District](https://www.riversideunified.org).  The resulting plots are available at [https://wgrover.github.io/RUSD-COVID](https://wgrover.github.io/RUSD-COVID).
 
 ## Prerequisites
 
