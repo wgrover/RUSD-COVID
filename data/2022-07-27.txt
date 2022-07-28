@@ -50,7 +50,7 @@
 49	O	1	Psychological Services
 50	O	0	Pupil Services
 51	H	0	Raincross Continuation High
-52	H	1	Ramona High School
+52	H	2	Ramona High School
 53	O	0	Research, Assessment and Evaluation
 54	O	0	Risk Management
 55	E	0	Rivera Elementary School
