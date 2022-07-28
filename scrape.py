@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 import time
 import re
+import sys
 
 options = Options()
 options.headless = True
@@ -86,26 +87,23 @@ locations = (
 outfile = open("./data/"+datetime.now().strftime("%Y-%m-%d")+".txt", "w")
 
 for num, location in enumerate(locations):
-    success = False
-    while not success:
-        browser = webdriver.Chrome(options=options)
-        browser.get(location[1])
-        time.sleep(30)
-        response = browser.page_source
+    browser = webdriver.Chrome(options=options)
+    browser.get(location[1])
+    time.sleep(30)
+    response = browser.page_source
 
-        result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
-        if not result:
+    result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
+    if result:  # There's a good number here; use it
+        count = int(result.group(1))
+    else:  # No number found; confirm that it really is "No data":
+        result2 = re.search('Total Confirmed Cases.*<div class="top-dummy" style="height: 0px;"></div><div class="bottom-dummy" style="height: 0px;"></div>', response)
+        if result2:  # Really is "No data"; record a 0:
             count = 0
-            success = True
         else:
-            count = int(result.group(1))
-            success = True
-        if success:
-            print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
-            outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
-        else:
-            print("RETRY")
-        browser.quit()
+            sys.exit("ERROR couldn't find data")
+    print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
+    outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
+    browser.quit()
 
 outfile.close()
 
