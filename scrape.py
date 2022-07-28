@@ -104,7 +104,7 @@ for num, location in enumerate(locations):
                 count = 0
                 success = True
             else:
-                sys.exit("ERROR couldn't find data; try again...")
+                print("ERROR couldn't find data; try again...")
         browser.quit()
     print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
     outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
