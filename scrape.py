@@ -91,7 +91,7 @@ for num, location in enumerate(locations):
     while not success:
         browser = webdriver.Chrome(options=options)
         browser.get(location[1])
-        time.sleep(10)
+        time.sleep(15)
         response = browser.page_source
 
         result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
