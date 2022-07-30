@@ -4,7 +4,6 @@ from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 import time
 import re
-import sys
 
 options = Options()
 options.headless = True
