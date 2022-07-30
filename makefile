@@ -1,6 +1,9 @@
-all: scrape plot push
+all: pull scrape plot push
 
-scrape:
+pull:
+	git pull
+
+scrape: pull
 	./scrape.py
 
 plot: scrape
