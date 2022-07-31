@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import WebDriverException
 from datetime import datetime
 import time
 import re
@@ -91,21 +92,25 @@ with open(outfilename, "w") as outfile:
         success = False
         while not success:
             browser = webdriver.Chrome(options=options)
-            browser.get(location[1])
-            time.sleep(30)  # wait 30 seconds for page to load
-            response = browser.page_source
+            try:
+                browser.get(location[1])
+                time.sleep(30)  # wait 30 seconds for page to load
+                response = browser.page_source
 
-            result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
-            if result:  # There's a good number here; use it
-                count = int(result.group(1))
-                success = True
-            else:  # No number found; confirm that it really is "No data":
-                result2 = re.search('Total Confirmed Cases.*<div class="top-dummy" style="height: 0px;"></div><div class="bottom-dummy" style="height: 0px;"></div>', response)
-                if result2:  # Really is "No data"; record a 0:
-                    count = 0
+                result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
+                if result:  # There's a good number here; use it
+                    count = int(result.group(1))
                     success = True
-                else:
-                    print("ERROR couldn't find data; try again...")
+                else:  # No number found; confirm that it really is "No data":
+                    result2 = re.search('Total Confirmed Cases.*<div class="top-dummy" style="height: 0px;"></div><div class="bottom-dummy" style="height: 0px;"></div>', response)
+                    if result2:  # Really is "No data"; record a 0:
+                        count = 0
+                        success = True
+                    else:
+                        print("ERROR: couldn't find data; try again...")
+            except WebDriverException:
+                print("ERROR: page unavailable; try again...")
+                success = False
             browser.quit()
         print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
         outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
