@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 import time
 import re
+import os
 
 options = Options()
 options.headless = True
@@ -83,31 +84,31 @@ locations = (
     ("Woodcrest Elementary School", "https://datastudio.google.com/u/0/reporting/768d990d-b5cc-459f-9d31-a8b68e950ae1/page/s4ztB", "E")
 )
 
-outfile = open("./data/"+datetime.now().strftime("%Y-%m-%d")+".txt", "w")
+outfilename = "./data/"+datetime.now().strftime("%Y-%m-%d")+".txt"
+os.makedirs(os.path.dirname(outfilename), exist_ok = True)
+with open(outfilename, "w") as outfile:
+    for num, location in enumerate(locations):
+        success = False
+        while not success:
+            browser = webdriver.Chrome(options=options)
+            browser.get(location[1])
+            time.sleep(30)  # wait 30 seconds for page to load
+            response = browser.page_source
 
-for num, location in enumerate(locations):
-    success = False
-    while not success:
-        browser = webdriver.Chrome(options=options)
-        browser.get(location[1])
-        time.sleep(30)  # wait 30 seconds for page to load
-        response = browser.page_source
-
-        result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
-        if result:  # There's a good number here; use it
-            count = int(result.group(1))
-            success = True
-        else:  # No number found; confirm that it really is "No data":
-            result2 = re.search('Total Confirmed Cases.*<div class="top-dummy" style="height: 0px;"></div><div class="bottom-dummy" style="height: 0px;"></div>', response)
-            if result2:  # Really is "No data"; record a 0:
-                count = 0
+            result = re.search('Total Confirmed Cases.*row block-0.*>(\d+)</div>', response)
+            if result:  # There's a good number here; use it
+                count = int(result.group(1))
                 success = True
-            else:
-                print("ERROR couldn't find data; try again...")
-        browser.quit()
-    print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
-    outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
+            else:  # No number found; confirm that it really is "No data":
+                result2 = re.search('Total Confirmed Cases.*<div class="top-dummy" style="height: 0px;"></div><div class="bottom-dummy" style="height: 0px;"></div>', response)
+                if result2:  # Really is "No data"; record a 0:
+                    count = 0
+                    success = True
+                else:
+                    print("ERROR couldn't find data; try again...")
+            browser.quit()
+        print(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0])
+        outfile.write(str(num) + "\t" + location[2] + "\t" + str(count) + "\t" + location[0] + "\n")
 
 
-outfile.close()
 
