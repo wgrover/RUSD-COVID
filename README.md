@@ -15,5 +15,5 @@ Code for tracking active COVID-19 cases in the [Riverside Unified School Distric
 
 `python3 plot.py` to generate plots summarizing all the locally saved data.
 
-`make` executes a makefile that scrapes the dashboard, generates plots, and pushes the results to the GitHub repository.  This is performed automatically every night at 8:00 PM using the `crontab` line `0 20 * * * cd /home/wgrover/RUSD-COVID && make -k > debug.log 2>&1` on a Raspberry Pi 4B.
+`make` executes a makefile that scrapes the dashboard, generates plots, and pushes the results to the GitHub repository.  This is performed automatically every night at 8:00 PM using the `crontab` line `0 20 * * * cd /home/wgrover/RUSD-COVID && make -k > debug.log 2>&1` running on a Raspberry Pi 4B sitting on my desk at home.
 
