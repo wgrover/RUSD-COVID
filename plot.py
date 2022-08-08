@@ -6,7 +6,7 @@ import numpy
 from datetime import datetime, timedelta
 
 def url():
-    plt.gcf().text(0.74, 0.82, "https://wgrover.github.io/RUSD-COVID", fontsize=8)
+    plt.gcf().text(0.085, 0.82, "https://wgrover.github.io/RUSD-COVID", fontsize=7)
     plt.gcf().text(0.94, 0.05, "2022")
 
 dates = []
@@ -70,7 +70,7 @@ for date in all_dates:
 
 schools = numpy.array(elementarys) + numpy.array(middles) + numpy.array(highs)
 
-plt.figure(figsize=(9, 3), dpi=300)
+plt.figure(figsize=(6, 3), dpi=300)
 
 plt.cla()
 plt.bar(dates, schools, color="k")
