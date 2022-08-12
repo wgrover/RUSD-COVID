@@ -4,8 +4,10 @@ Code for tracking active COVID-19 cases in the [Riverside Unified School Distric
 
 ## Prerequisites
 
-- python3 via [https://www.python.org](https://www.python.org)
+To run the code on a Raspberry Pi:
+
 - selenium via `pip3 install selenium`
+- chromedriver via `sudo apt install chromium-chromedriver`
 - numpy via `pip3 install numpy`
 - matplotlib via `pip3 install matplotlib`
 
