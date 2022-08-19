@@ -1,0 +1,72 @@
+0	E	7	Adams Elementary School
+1	E	8	Alcott Elementary School
+2	H	14	Arlington High School
+3	E	1	Beatty Elementary School
+4	E	3	Bryant Elementary School
+5	O	0	Business Services
+6	O	1	Business Services - Purchasing
+7	E	19	Castle View Elementary School
+8	M	24	Central Middle School
+9	M	12	Chemawa Middle School
+10	O	0	Communications Admin
+11	M	9	Earhart Middle School
+12	O	1	Early Childhood
+13	O	2	Educational Options
+14	O	0	Elementary Education
+15	E	5	Emerson Elementary School
+16	O	0	Facilities
+17	O	0	Family Resource Center
+18	E	12	Franklin Elementary School
+19	E	5	Fremont Elementary School
+20	M	8	Gage Middle School
+21	E	11	Harrison Elementary School
+22	E	5	Hawthorne Elementary School
+23	E	5	Highgrove Elementary School
+24	E	10	Highland Elementary School
+25	O	0	Human Resources
+26	O	0	Innovation and Learner Engagement
+27	E	6	Jackson Elementary School
+28	E	7	Jefferson Elementary School
+29	E	9	Kennedy Elementary School
+30	E	4	Lake Mathews Elementary School
+31	E	13	Liberty Elementary School
+32	H	1	Lincoln Continuation High
+33	E	2	Longfellow Elementary School
+34	E	22	Madison Elementary School
+35	E	22	Magnolia Elementary School
+36	O	3	Maintenance and Operations
+37	H	21	Martin Luther King High School
+38	M	9	Miller Middle School
+39	E	5	Monroe Elementary School
+40	E	14	Mt View Elementary School
+41	H	11	North High School
+42	O	0	Nutrition Services - Administration
+43	E	25	Pachappa Elementary School
+44	H	17	Poly High School
+45	O	0	Professional Growth Systems
+46	O	0	Program Development & Extended Learning
+47	O	0	Program Quality/Academic English Learners
+48	O	0	Project Team
+49	O	1	Psychological Services
+50	O	0	Pupil Services
+51	H	2	Raincross Continuation High
+52	H	18	Ramona High School
+53	O	0	Research, Assessment and Evaluation
+54	O	0	Risk Management
+55	E	11	Rivera Elementary School
+56	O	4	Riverside Adult School
+57	O	0	Secondary Education
+58	M	3	Sierra Middle School
+59	O	0	Special Education
+60	M	26	STEM Academy
+61	E	5	Sunshine Early Childhood Center
+62	O	0	Superintendent
+63	E	7	Taft Elementary School
+64	O	1	Technology Services
+65	O	0	Transportation
+66	E	6	Twain Elementary School
+67	M	11	University Middle School
+68	E	14	Victoria Elementary School
+69	E	17	Washington Elementary School
+70	O	0	Wellness & Engagement
+71	E	4	Woodcrest Elementary School
