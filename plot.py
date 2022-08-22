@@ -76,7 +76,7 @@ plt.cla()
 plt.bar(dates, schools, color="k")
 span = plt.gca().get_ylim()[1] - plt.gca().get_ylim()[0]
 plt.plot(missed_dates, [0.02*span] * len(missed_dates), "ro", markersize=2)
-plt.title("Active cases at all RUSD schools (14-day rolling window)")
+plt.title("Active COVID-19 cases at all RUSD schools (14-day rolling window)")
 url()
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
 for label in plt.gca().get_xticklabels(which='major'):
@@ -88,7 +88,7 @@ plt.cla()
 plt.bar(dates, elementarys, color="b")
 span = plt.gca().get_ylim()[1] - plt.gca().get_ylim()[0]
 plt.plot(missed_dates, [0.02*span] * len(missed_dates), "ro", markersize=2)
-plt.title("Active cases at elementary schools (14-day rolling window)")
+plt.title("Active COVID-19 cases at elementary schools (14-day rolling window)")
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
 for label in plt.gca().get_xticklabels(which='major'):
     label.set(rotation=30, horizontalalignment='right')
@@ -98,7 +98,7 @@ plt.cla()
 plt.bar(dates, middles, color="green")
 span = plt.gca().get_ylim()[1] - plt.gca().get_ylim()[0]
 plt.plot(missed_dates, [0.02*span] * len(missed_dates), "ro", markersize=2)
-plt.title("Active cases at middle schools (14-day rolling window)")
+plt.title("Active COVID-19 cases at middle schools (14-day rolling window)")
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
 for label in plt.gca().get_xticklabels(which='major'):
     label.set(rotation=30, horizontalalignment='right')
@@ -108,7 +108,7 @@ plt.cla()
 plt.bar(dates, highs, color="orange")
 span = plt.gca().get_ylim()[1] - plt.gca().get_ylim()[0]
 plt.plot(missed_dates, [0.02*span] * len(missed_dates), "ro", markersize=2)
-plt.title("Active cases at high schools (14-day rolling window)")
+plt.title("Active COVID-19 cases at high schools (14-day rolling window)")
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
 for label in plt.gca().get_xticklabels(which='major'):
     label.set(rotation=30, horizontalalignment='right')
@@ -118,7 +118,7 @@ plt.cla()
 plt.bar(dates, others, color="0.80")
 span = plt.gca().get_ylim()[1] - plt.gca().get_ylim()[0]
 plt.plot(missed_dates, [0.02*span] * len(missed_dates), "ro", markersize=2)
-plt.title("Active non-school cases (14-day rolling window)")
+plt.title("Active non-school COVID-19 cases (14-day rolling window)")
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%b %e"))
 for label in plt.gca().get_xticklabels(which='major'):
     label.set(rotation=30, horizontalalignment='right')
