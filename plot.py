@@ -6,7 +6,7 @@ import numpy
 from datetime import datetime, timedelta
 
 def url():
-    plt.gcf().text(0.085, 0.82, "https://wgrover.github.io/RUSD-COVID", fontsize=7)
+    plt.gcf().text(0.11, 0.82, "https://wgrover.github.io/RUSD-COVID", fontsize=7)
     plt.gcf().text(0.94, 0.05, "2022")
 
 dates = []
