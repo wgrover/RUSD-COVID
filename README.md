@@ -17,5 +17,5 @@ To run the code on a Raspberry Pi:
 
 `python3 plot.py` to generate plots summarizing all the locally saved data.
 
-`make` executes a makefile that scrapes the dashboard, generates plots, and pushes the results to the GitHub repository.  This is performed automatically every night at 8:00 PM using the `crontab` line `0 20 * * * cd /home/wgrover/RUSD-COVID && make -k > debug.log 2>&1` running on a Raspberry Pi 4B sitting on my desk at home.
+`make` executes a makefile that scrapes the dashboard, generates plots, and pushes the results to the GitHub repository.  This is performed automatically every night at 8:00 PM using the `crontab` line `0 20 * * * cd /home/wgrover/RUSD-COVID && make > debug.log 2>&1` running on a Raspberry Pi 4B sitting on my desk at home.
 
