@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 def url():
     plt.gcf().text(0.11, 0.82, "https://wgrover.github.io/RUSD-COVID", fontsize=7)
-    plt.gcf().text(0.86, 0.05, "2022/23")
+    plt.gcf().text(0.86, 0.05, "2023/24")
 
 dates = []
 elementarys = []
