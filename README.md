@@ -1,6 +1,6 @@
 # RUSD-COVID
 
-Code for tracking active COVID-19 cases in the [Riverside Unified School District](https://www.riversideunified.org).  The resulting plots are available at [https://wgrover.github.io/RUSD-COVID](https://wgrover.github.io/RUSD-COVID).
+Code for tracking active COVID-19 cases in the [Riverside Unified School District](https://www.riversideunified.org).  The resulting plots are available at [https://wgrover.github.io/RUSD-COVID](https://wgrover.github.io/RUSD-COVID).  The project currently shows data for the 2023-2024 school year; historical data for the 2022-2023 and 2021-2022 school years are available in the "data" folders.
 
 ## Prerequisites
 
